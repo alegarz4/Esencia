@@ -1,162 +1,548 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ESENCIA | Revista Digital</title>
+<title>ESENCIA | Mujeres reales, historias que inspiran</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+:root{
+
+--vino:#6E1F2B;
+--rosa:#D8B5B5;
+--crema:#F8F3EE;
+--dorado:#C9A86A;
+--texto:#2B2B2B;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#F8F3EE;
-color:#2B2B2B;
+
+font-family:'Montserrat',sans-serif;
+background:var(--crema);
+color:var(--texto);
+line-height:1.8;
+
 }
 
-header{
-background:#6E1F2B;
-color:white;
-padding:60px 20px;
-text-align:center;
-}
+nav{
 
-header h1{
-font-size:4rem;
-margin:0;
-}
-
-header p{
-font-size:1.1rem;
-}
-
-section{
-padding:50px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-h2{
-color:#6E1F2B;
-margin-bottom:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-margin-bottom:30px;
-}
-
-.portada{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:40px;
-}
-
-.portada img{
-max-width:350px;
+position:fixed;
+top:0;
+left:0;
 width:100%;
-border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,.15);
-}
 
-.directora{
+background:white;
+
 display:flex;
-flex-wrap:wrap;
+justify-content:space-between;
 align-items:center;
-gap:30px;
+
+padding:20px 8%;
+
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+z-index:999;
+
 }
 
-.directora img{
-width:250px;
-border-radius:15px;
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:700;
+color:var(--vino);
+
+}
+
+.menu a{
+
+text-decoration:none;
+color:var(--texto);
+margin-left:25px;
+font-weight:500;
+
+}
+
+.menu a:hover{
+
+color:var(--vino);
+
+}
+
+.hero{
+
+padding:140px 8% 80px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+font-size:6rem;
+line-height:1;
+color:var(--vino);
+
+}
+
+.hero h2{
+
+font-weight:400;
+margin:20px 0;
+
+}
+
+.hero p{
+
+margin-bottom:15px;
+
+}
+
+.hero img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
 }
 
 .btn{
+
 display:inline-block;
-padding:12px 20px;
-background:#6E1F2B;
-color:white;
+
+padding:14px 25px;
+
+border-radius:8px;
+
 text-decoration:none;
-border-radius:6px;
+
+font-weight:600;
+
+margin-right:10px;
+
 }
 
-footer{
-background:#6E1F2B;
+.btn-principal{
+
+background:var(--vino);
 color:white;
-text-align:center;
-padding:25px;
-margin-top:50px;
+
+}
+
+.btn-secundario{
+
+border:2px solid var(--vino);
+color:var(--vino);
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+.titulo{
+
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+color:var(--vino);
+
+margin-bottom:30px;
+
+}
+
+.tarjeta{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.foto-editora{
+
+width:260px;
+border-radius:20px;
+
+float:left;
+
+margin-right:30px;
+margin-bottom:20px;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.foto-editora{
+
+float:none;
+width:100%;
+margin:0 0 20px 0;
+
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<nav>
+
+<div class="logo">
+
+ESENCIA
+
+</div>
+
+<div class="menu">
+
+<a href="#carta">Carta</a>
+
+<a href="#temas">Temas</a>
+
+<a href="#edicion">Edición</a>
+
+<a href="#joven">ESENCIA Joven</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
 
 <h1>ESENCIA</h1>
 
-<p>
+<h2>
+
 Mujeres reales, historias que inspiran
-</p>
+
+</h2>
 
 <p>
-Mtra. Claudia Alejandra Garza
+
+Revista Digital de Bienestar, Belleza y Crecimiento Personal.
+
+</p>
+
 <br>
-Fundadora y Directora Editorial
-</p>
 
-</header>
+<a href="Revista Esencia Vol 01.pdf"
+target="_blank"
+class="btn btn-principal">
 
-<section>
+Leer edición
 
-<div class="portada">
+</a>
 
-<img src="imagesportada-vol1.png" alt="Portada ESENCIA">
+<a href="Revista Esencia Vol 01.pdf"
+target="_blank"
+class="btn btn-secundario">
 
-<div>
+Descargar PDF
 
-<h2>Volumen 01 · Junio 2026</h2>
+</a>
 
-<p>
-Bienvenida a la primera edición de ESENCIA.
-Una revista creada para mujeres reales que desean crecer,
-reinventarse y descubrir nuevas formas de bienestar.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Carta de la Editora</h2>
-
-<div class="card directora">
-
-<img src="yo.jpeg" alt="Claudia Alejandra Garza">
-
-<div>
+<br><br>
 
 <p>
-Aquí colocaremos la carta completa de la editora.
-</p>
-
-<p>
-ESENCIA nace para mujeres reales...
-</p>
 
 <strong>
+
 Mtra. Claudia Alejandra Garza
+
 </strong>
+
+<br>
+
+Fundadora y Directora Editorial
+
+</p>
+
+</div>
+
+<div>
+
+<img src="imagesportada-vol1.png">
+
+</div>
+
+</section>
+<section id="carta">
+
+<h2 class="titulo">
+
+Carta de la Editora
+
+</h2>
+
+<div class="tarjeta">
+
+<img src="yo.jpeg"
+class="foto-editora"
+alt="Claudia Alejandra Garza">
+
+<p>
+
+<strong>
+ESENCIA nace para mujeres reales.
+</strong>
+
+</p>
+
+<p>
+
+Para mujeres que trabajan, aman,
+se equivocan, vuelven a empezar
+y siguen creciendo.
+
+</p>
+
+<p>
+
+Esta revista no busca mostrar perfección.
+Busca compartir historias auténticas,
+consejos prácticos y experiencias que
+nos ayuden a sentirnos mejor con nosotras mismas.
+
+</p>
+
+<p>
+
+Aquí hablaremos de belleza,
+bienestar, relaciones,
+moda, trabajo, autoestima
+y de todos esos cambios
+que forman parte de nuestra vida.
+
+</p>
+
+<p>
+
+Creo que cada mujer tiene una historia
+que merece ser escuchada.
+
+También creo que nunca es demasiado tarde
+para mirarnos con más cariño,
+descubrir nuevas versiones de nosotras
+y volver a comenzar.
+
+</p>
+
+<p>
+
+Gracias por acompañarme
+en este primer número.
+
+</p>
+
+<br>
+
+<p>
+
+Con cariño,
+
+</p>
+
+<p>
+
+<strong>
+
+Mtra. Claudia Alejandra Garza
+
+</strong>
+
+<br>
+
+Fundadora y Directora Editorial de ESENCIA
+
+</p>
+
+</div>
+
+</section>
+
+<section id="temas">
+
+<h2 class="titulo">
+
+Temas de ESENCIA
+
+</h2>
+
+<div style="display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;">
+
+<div class="tarjeta">
+
+<h3>🌸 Bienestar</h3>
+
+<p>
+Pequeños hábitos que transforman vidas.
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>💄 Belleza Real</h3>
+
+<p>
+Autocuidado, confianza y autenticidad.
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>👗 Moda para la Vida Real</h3>
+
+<p>
+Estilo práctico para mujeres reales.
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>⭐ Mujeres Extraordinarias</h3>
+
+<p>
+Historias que inspiran y dejan huella.
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>🌱 Crecimiento Personal</h3>
+
+<p>
+Reinventarse y seguir creciendo.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section id="edicion">
+
+<h2 class="titulo">
+
+Edición Actual
+
+</h2>
+
+<div style="display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;">
+
+<div>
+
+<img src="imagesportada-vol1.png"
+style="width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);">
+
+</div>
+
+<div>
+
+<h3 style="font-size:2rem;color:#6E1F2B;">
+
+Volumen 01 · Junio 2026
+
+</h3>
+
+<br>
+
+<p>
+
+La primera edición de ESENCIA invita a las lectoras
+a reencontrarse consigo mismas a través de historias,
+reflexiones y experiencias de transformación.
+
+</p>
+
+<ul style="margin-top:20px;padding-left:20px;">
+
+<li>Volver a mirarte con cariño</li>
+
+<li>Reinventarse después de los 40</li>
+
+<li>Moda para la vida real</li>
+
+<li>Belleza que inspira</li>
+
+<li>Mujeres extraordinarias</li>
+
+<li>Bienestar y crecimiento personal</li>
+
+</ul>
+
+<br>
+
+<a href="Revista Esencia Vol 01.pdf"
+target="_blank"
+class="btn btn-principal">
+
+Abrir Revista
+
+</a>
 
 </div>
 
@@ -166,24 +552,114 @@ Mtra. Claudia Alejandra Garza
 
 <section>
 
-<h2>Proyectos ESENCIA</h2>
+<div style="
+background:#6E1F2B;
+color:white;
+padding:50px;
+border-radius:25px;">
 
-<div class="card">
+<h2 style="color:white;">
 
-<h3>ESENCIA JOVEN</h3>
+Mujeres Extraordinarias
+
+</h2>
+
+<h3>
+
+Irene Robledo García
+
+</h3>
+
+<br>
 
 <p>
-La futura revista creada por estudiantes.
+
+Educadora, humanista y pionera jalisciense.
+Su legado nos recuerda que la educación
+transforma vidas y abre oportunidades
+para las nuevas generaciones.
+
 </p>
 
 </div>
 
-<div class="card">
+</section>
 
-<h3>Taller de Producción Editorial</h3>
+<section id="joven">
+
+<h2 class="titulo">
+
+Próximamente
+
+</h2>
+
+<div style="
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;">
+
+<div class="tarjeta">
+
+<h3>
+
+ESENCIA Joven
+
+</h3>
+
+<br>
 
 <p>
-Formando escritores, diseñadores, fotógrafos y creadores de contenido.
+
+La futura revista creada por estudiantes
+para compartir ideas, historias y proyectos.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>
+
+Taller de Producción Editorial
+
+</h3>
+
+<br>
+
+<p>
+
+Un espacio para formar escritores,
+diseñadores, fotógrafos,
+entrevistadores y creadores de contenido.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">
+
+Una comunidad para mujeres reales
+
+</h2>
+
+<div class="tarjeta">
+
+<p>
+
+ESENCIA es más que una revista.
+
+Es un espacio para compartir experiencias,
+aprender juntas y descubrir nuevas formas
+de bienestar, crecimiento personal
+y desarrollo integral.
+
 </p>
 
 </div>
@@ -192,9 +668,44 @@ Formando escritores, diseñadores, fotógrafos y creadores de contenido.
 
 <footer>
 
-ESENCIA © 2026
+<h3>
+
+ESENCIA
+
+</h3>
+
+<br>
+
+<p>
+
+Mujeres reales, historias que inspiran
+
+</p>
+
+<br>
+
+<p>
+
+Mtra. Claudia Alejandra Garza
+
+</p>
+
+<p>
+
+Fundadora y Directora Editorial
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 ESENCIA
+
+</p>
 
 </footer>
 
 </body>
+
 </html>
