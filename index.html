@@ -890,119 +890,177 @@
       text-transform: uppercase;
     }
 
-    .workshop {
+    .collaborate {
       padding: 135px 0;
       background: var(--cream);
     }
 
-    .workshop-head {
+    .collaborate-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: end;
-      gap: 65px;
-      margin-bottom: 65px;
+      grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+      align-items: start;
+      gap: clamp(55px, 8vw, 110px);
     }
 
-    .workshop-head .section-intro {
-      margin: 0;
-      padding-bottom: 5px;
+    .collaborate-copy {
+      position: sticky;
+      top: 115px;
     }
 
-    .workshop-list {
-      border-top: 1px solid rgba(110, 31, 43, 0.18);
+    .collaborate-copy .section-title {
+      margin-bottom: 28px;
     }
 
-    .workshop-item {
-      display: grid;
-      grid-template-columns: 70px 1fr auto;
-      align-items: center;
-      gap: 20px;
-      padding: 25px 10px;
-      border-bottom: 1px solid rgba(110, 31, 43, 0.18);
-      transition: padding 0.3s ease, background 0.3s ease;
+    .collaborate-copy > p:not(.eyebrow) {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
-    .workshop-item:hover {
-      padding-right: 25px;
-      padding-left: 25px;
-      background: rgba(255, 253, 251, 0.75);
+    .volunteer-notice {
+      margin-top: 35px;
+      padding: 25px 28px;
+      border-left: 3px solid var(--gold);
+      background: var(--white);
+      color: #4d4140;
+      font-size: 0.78rem;
     }
 
-    .workshop-index {
-      color: var(--gold);
-      font-family: var(--serif);
-      font-size: 1.1rem;
-    }
-
-    .workshop-item h3 {
-      margin: 0;
+    .volunteer-notice strong {
+      display: block;
+      margin-bottom: 7px;
       color: var(--wine);
       font-family: var(--serif);
-      font-size: clamp(1.65rem, 3vw, 2.35rem);
-      font-weight: 500;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
-    .workshop-item p {
-      max-width: 400px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.74rem;
-      text-align: right;
-    }
-
-    .contact {
-      padding: 105px 0;
+    .collaboration-form {
+      padding: clamp(30px, 5vw, 52px);
+      border: 1px solid rgba(110, 31, 43, 0.12);
       background: var(--white);
+      box-shadow: var(--shadow);
     }
 
-    .contact-card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 45px;
-      padding: clamp(45px, 7vw, 85px);
-      overflow: hidden;
-      background: var(--wine);
-      color: var(--white);
-    }
-
-    .contact-card::after {
-      position: absolute;
-      top: -75px;
-      right: 15%;
-      width: 240px;
-      height: 240px;
-      border: 1px solid rgba(201, 168, 106, 0.3);
-      border-radius: 50%;
-      content: "";
-    }
-
-    .contact-card h2 {
-      position: relative;
-      z-index: 1;
-      max-width: 750px;
-      margin: 0;
+    .form-heading {
+      margin: 0 0 8px;
+      color: var(--wine);
       font-family: var(--serif);
-      font-size: clamp(2.8rem, 6vw, 5.3rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 500;
-      letter-spacing: -0.035em;
-      line-height: 0.95;
+      line-height: 1;
     }
 
-    .contact-card p {
-      position: relative;
-      z-index: 1;
-      max-width: 620px;
-      margin: 22px 0 0;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 0.88rem;
+    .form-intro {
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 0.76rem;
     }
 
-    .contact-card .btn {
-      position: relative;
-      z-index: 1;
-      white-space: nowrap;
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 18px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label,
+    .form-label {
+      color: var(--wine);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid rgba(110, 31, 43, 0.2);
+      border-radius: 0;
+      outline: none;
+      background: var(--cream);
+      color: var(--ink);
+      font: 0.8rem/1.5 var(--sans);
+      transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .form-field textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.13);
+    }
+
+    .form-consent {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 11px;
+      align-items: start;
+      margin: 25px 0;
+      color: #594f4d;
+      font-size: 0.7rem;
+      line-height: 1.55;
+    }
+
+    .form-consent input {
+      width: 17px;
+      height: 17px;
+      margin: 3px 0 0;
+      accent-color: var(--wine);
+    }
+
+    .form-note {
+      margin: 17px 0 0;
+      color: var(--muted);
+      font-size: 0.62rem;
+    }
+
+    .form-success {
+      display: none;
+      margin-bottom: 25px;
+      padding: 15px 18px;
+      border-left: 3px solid var(--gold);
+      background: #f2e8d7;
+      color: var(--wine);
+      font-size: 0.78rem;
+    }
+
+    .form-success.visible {
+      display: block;
+    }
+
+    .visitor-counter {
+      display: inline-flex;
+      margin-top: 23px;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.61rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .visitor-counter img {
+      height: 20px;
+      width: auto;
     }
 
     .footer {
@@ -1465,7 +1523,7 @@
       .issue-grid,
       .extraordinary-grid,
       .young-content,
-      .workshop-head {
+      .collaborate-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1487,7 +1545,7 @@
       .current-issue,
       .extraordinary,
       .young,
-      .workshop {
+      .collaborate {
         padding: 95px 0;
       }
 
@@ -1540,16 +1598,9 @@
         max-width: 620px;
       }
 
-      .workshop-head {
-        gap: 25px;
-      }
-
-      .contact-card {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-card .btn {
-        justify-self: start;
+      .collaborate-copy {
+        position: relative;
+        top: auto;
       }
 
       .footer-grid {
@@ -1655,22 +1706,20 @@
         margin-left: 8%;
       }
 
-      .workshop-item {
-        grid-template-columns: 45px 1fr;
-        gap: 10px;
+      .collaborate {
+        padding: 75px 0;
       }
 
-      .workshop-item p {
-        grid-column: 2;
-        text-align: left;
+      .collaboration-form {
+        padding: 30px 20px;
       }
 
-      .contact {
-        padding: 70px 0;
+      .form-grid {
+        grid-template-columns: 1fr;
       }
 
-      .contact-card {
-        padding: 45px 25px;
+      .form-field.full {
+        grid-column: auto;
       }
 
       .footer-grid {
@@ -1989,59 +2038,96 @@
       </div>
     </section>
 
-    <section class="workshop" id="taller">
-      <div class="container">
-        <div class="workshop-head">
-          <div>
-            <p class="eyebrow reveal">Aprender creando</p>
-            <h2 class="section-title reveal delay-1">Taller de Producción Editorial</h2>
-          </div>
-          <p class="section-intro reveal delay-2">
-            Un laboratorio práctico para desarrollar una publicación desde la idea inicial hasta su salida editorial.
+    <section class="collaborate" id="contacto">
+      <div class="container collaborate-grid">
+        <div class="collaborate-copy reveal">
+          <p class="eyebrow">Convocatoria abierta</p>
+          <h2 class="section-title">Colabora con ESENCIA</h2>
+          <p>
+            Buscamos voces auténticas que quieran compartir experiencias, conocimientos e historias capaces de
+            acompañar e inspirar a otras mujeres.
           </p>
-        </div>
+          <p>
+            Puedes participar con artículos, entrevistas, fotografía, ilustración, bienestar, moda, belleza real,
+            cultura o crecimiento personal.
+          </p>
 
-        <div class="workshop-list">
-          <article class="workshop-item reveal">
-            <span class="workshop-index">01</span>
-            <h3>Escritura</h3>
-            <p>Ideas, estructura, voz y edición de textos.</p>
-          </article>
-          <article class="workshop-item reveal">
-            <span class="workshop-index">02</span>
-            <h3>Fotografía</h3>
-            <p>Lenguaje visual y producción de imágenes.</p>
-          </article>
-          <article class="workshop-item reveal">
-            <span class="workshop-index">03</span>
-            <h3>Entrevista</h3>
-            <p>Escucha, investigación y conversaciones con sentido.</p>
-          </article>
-          <article class="workshop-item reveal">
-            <span class="workshop-index">04</span>
-            <h3>Diseño Editorial</h3>
-            <p>Composición, tipografía y narrativa gráfica.</p>
-          </article>
-          <article class="workshop-item reveal">
-            <span class="workshop-index">05</span>
-            <h3>Producción de Revistas</h3>
-            <p>Planeación, coordinación y publicación final.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contacto">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div>
-            <h2>Historias reales merecen ser contadas.</h2>
-            <p>ESENCIA es una comunidad abierta a nuevas voces, ideas y experiencias que puedan inspirar a otras mujeres.</p>
+          <div class="volunteer-notice">
+            <strong>Colaboración voluntaria</strong>
+            ESENCIA es un proyecto editorial independiente. Actualmente no pagamos por los artículos ni por las
+            demás participaciones: todas las aportaciones son colaboraciones voluntarias. Cada contenido publicado
+            incluirá el crédito correspondiente de su autora o colaboradora.
           </div>
-          <a class="btn btn-light" href="Revista Esencia Vol 01.pdf" target="_blank" rel="noopener">
-            Conoce ESENCIA <span class="arrow" aria-hidden="true">→</span>
-          </a>
         </div>
+
+        <form class="collaboration-form reveal delay-1"
+              action="https://formsubmit.co/mtra.claudiaalejandragarza@gmail.com"
+              method="POST">
+          <input type="hidden" name="_subject" value="Nueva solicitud de colaboración para Revista ESENCIA">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://alegarz4.github.io/Esencia/?solicitud=enviada#contacto">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+
+          <h3 class="form-heading">Quiero participar</h3>
+          <p class="form-intro">Cuéntanos brevemente sobre ti y la propuesta que te gustaría compartir.</p>
+          <div class="form-success" id="form-success" role="status">
+            Gracias por tu interés. Tu solicitud fue enviada correctamente.
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="collab-name">Nombre completo</label>
+              <input id="collab-name" type="text" name="Nombre" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="collab-email">Correo electrónico</label>
+              <input id="collab-email" type="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="collab-city">Ciudad o país</label>
+              <input id="collab-city" type="text" name="Ciudad o país" autocomplete="address-level2">
+            </div>
+
+            <div class="form-field">
+              <label for="collab-area">Área de colaboración</label>
+              <select id="collab-area" name="Área de colaboración" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option>Artículo o columna</option>
+                <option>Entrevista</option>
+                <option>Fotografía</option>
+                <option>Ilustración o diseño</option>
+                <option>Bienestar y crecimiento personal</option>
+                <option>Moda o belleza real</option>
+                <option>Otra propuesta</option>
+              </select>
+            </div>
+
+            <div class="form-field full">
+              <label for="collab-profile">Háblanos brevemente de ti</label>
+              <textarea id="collab-profile" name="Perfil de la persona" required></textarea>
+            </div>
+
+            <div class="form-field full">
+              <label for="collab-proposal">¿Qué te gustaría aportar a ESENCIA?</label>
+              <textarea id="collab-proposal" name="Propuesta de colaboración" required></textarea>
+            </div>
+          </div>
+
+          <label class="form-consent">
+            <input type="checkbox" name="Acepta colaboración voluntaria" value="Sí" required>
+            <span>
+              Comprendo y acepto que mi participación sería voluntaria y no remunerada. En caso de publicación,
+              ESENCIA reconocerá la autoría de mi colaboración.
+            </span>
+          </label>
+
+          <button class="btn btn-primary" type="submit">
+            Enviar propuesta <span class="arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="form-note">La información se utilizará únicamente para responder a tu solicitud de colaboración.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -2105,6 +2191,11 @@
         <div>
           <p class="footer-brand">ESENCIA</p>
           <p class="footer-tagline">Mujeres reales, historias que inspiran</p>
+          <div class="visitor-counter">
+            <span>Visitas a ESENCIA</span>
+            <img src="https://hits.sh/alegarz4.github.io/Esencia.svg?style=flat-square&amp;label=visitas&amp;color=6E1F2B&amp;labelColor=241B1C"
+                 alt="Contador de visitas de ESENCIA">
+          </div>
         </div>
 
         <div>
@@ -2176,6 +2267,12 @@
     window.addEventListener("resize", () => {
       if (window.innerWidth > 820) closeMenu();
     });
+
+    const formStatus = new URLSearchParams(window.location.search).get("solicitud");
+    if (formStatus === "enviada") {
+      document.getElementById("form-success")?.classList.add("visible");
+      history.replaceState({}, document.title, `${window.location.pathname}#contacto`);
+    }
 
     const reader = document.getElementById("revista");
     const readerViewport = reader.querySelector(".reader-viewport");
