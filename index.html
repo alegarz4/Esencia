@@ -1073,6 +1073,149 @@
       text-transform: uppercase;
     }
 
+    .reader {
+      position: fixed;
+      z-index: 2000;
+      inset: 0;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: rgba(28, 20, 21, 0.97);
+      color: var(--white);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .reader.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .reader-header,
+    .reader-controls {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px clamp(18px, 4vw, 55px);
+      border-color: rgba(255, 255, 255, 0.1);
+      background: rgba(28, 20, 21, 0.96);
+    }
+
+    .reader-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .reader-controls {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .reader-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+
+    .reader-close,
+    .reader-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .reader-close {
+      width: 44px;
+      height: 44px;
+      font-size: 1.45rem;
+    }
+
+    .reader-arrow {
+      min-width: 120px;
+      min-height: 44px;
+      padding: 9px 18px;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .reader-close:hover,
+    .reader-arrow:hover:not(:disabled) {
+      border-color: var(--gold);
+      background: rgba(201, 168, 106, 0.12);
+    }
+
+    .reader-arrow:disabled {
+      opacity: 0.28;
+      cursor: default;
+    }
+
+    .reader-viewport {
+      display: flex;
+      min-height: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: auto;
+      perspective: 1800px;
+    }
+
+    .reader-spread {
+      display: flex;
+      max-width: 1180px;
+      max-height: calc(100vh - 200px);
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 25px 42px rgba(0, 0, 0, 0.45));
+      transform-origin: center;
+    }
+
+    .reader-spread.turning {
+      animation: pageTurn 0.38s ease;
+    }
+
+    .reader-page {
+      display: block;
+      width: auto;
+      max-width: 50%;
+      height: auto;
+      max-height: calc(100vh - 200px);
+      object-fit: contain;
+      background: white;
+    }
+
+    .reader-page:first-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.18);
+    }
+
+    .reader-page.single {
+      max-width: 100%;
+      border-right: 0;
+    }
+
+    .reader-counter {
+      min-width: 150px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.67rem;
+      letter-spacing: 0.12em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @keyframes pageTurn {
+      0% { opacity: 0.25; transform: rotateY(-7deg) scale(0.98); }
+      100% { opacity: 1; transform: rotateY(0) scale(1); }
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -1393,6 +1536,43 @@
       .footer-bottom {
         flex-direction: column;
       }
+
+      .reader-header,
+      .reader-controls {
+        min-height: 62px;
+      }
+
+      .reader-title {
+        font-size: 1.25rem;
+      }
+
+      .reader-viewport {
+        padding: 12px;
+      }
+
+      .reader-spread,
+      .reader-page {
+        max-height: calc(100vh - 168px);
+      }
+
+      .reader-page {
+        max-width: 100%;
+      }
+
+      .reader-arrow {
+        min-width: 48px;
+        padding: 9px 12px;
+        font-size: 0;
+      }
+
+      .reader-arrow span {
+        font-size: 1.2rem;
+      }
+
+      .reader-counter {
+        min-width: 110px;
+        font-size: 0.58rem;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1449,7 +1629,7 @@
           </p>
 
           <div class="hero-actions reveal delay-3">
-            <a class="btn btn-primary" href="Revista Esencia Vol 01.pdf" target="_blank" rel="noopener">
+            <a class="btn btn-primary" href="#revista" data-open-reader>
               Leer edición <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="btn btn-outline" href="Revista Esencia Vol 01.pdf" download>
@@ -1601,7 +1781,7 @@
             <li>Bienestar y crecimiento personal</li>
           </ul>
 
-          <a class="btn btn-primary reveal delay-3" href="Revista Esencia Vol 01.pdf" target="_blank" rel="noopener">
+          <a class="btn btn-primary reveal delay-3" href="#revista" data-open-reader>
             Abrir revista <span class="arrow" aria-hidden="true">→</span>
           </a>
         </div>
@@ -1701,6 +1881,30 @@
     </section>
   </main>
 
+  <section class="reader" id="revista" role="dialog" aria-modal="true" aria-labelledby="reader-title" aria-hidden="true">
+    <div class="reader-header">
+      <h2 class="reader-title" id="reader-title">ESENCIA · Volumen 01</h2>
+      <button class="reader-close" type="button" aria-label="Cerrar revista">×</button>
+    </div>
+
+    <div class="reader-viewport">
+      <div class="reader-spread" aria-live="polite">
+        <img class="reader-page" id="reader-page-left" src="revista-pages/pagina-01.jpg" alt="Portada de la revista ESENCIA">
+        <img class="reader-page" id="reader-page-right" src="" alt="" hidden>
+      </div>
+    </div>
+
+    <div class="reader-controls">
+      <button class="reader-arrow" id="reader-prev" type="button" disabled>
+        <span aria-hidden="true">←</span> Anterior
+      </button>
+      <span class="reader-counter" id="reader-counter">Portada · 1 de 16</span>
+      <button class="reader-arrow" id="reader-next" type="button">
+        Siguiente <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -1777,6 +1981,124 @@
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 820) closeMenu();
+    });
+
+    const reader = document.getElementById("revista");
+    const readerSpread = reader.querySelector(".reader-spread");
+    const readerLeft = document.getElementById("reader-page-left");
+    const readerRight = document.getElementById("reader-page-right");
+    const readerCounter = document.getElementById("reader-counter");
+    const previousPage = document.getElementById("reader-prev");
+    const nextPage = document.getElementById("reader-next");
+    const closeReaderButton = reader.querySelector(".reader-close");
+    const pageTotal = 16;
+    let currentPage = 0;
+    let lastFocusedElement = null;
+
+    const pageSource = index => `revista-pages/pagina-${String(index + 1).padStart(2, "0")}.jpg`;
+    const isSinglePage = () => window.matchMedia("(max-width: 560px)").matches;
+
+    const renderReader = (animate = true) => {
+      const single = isSinglePage();
+      const showRight = !single && currentPage > 0 && currentPage + 1 < pageTotal;
+
+      readerLeft.src = pageSource(currentPage);
+      readerLeft.alt = currentPage === 0
+        ? "Portada de la revista ESENCIA"
+        : `Página ${currentPage + 1} de la revista ESENCIA`;
+      readerLeft.classList.toggle("single", !showRight);
+
+      readerRight.hidden = !showRight;
+      if (showRight) {
+        readerRight.src = pageSource(currentPage + 1);
+        readerRight.alt = `Página ${currentPage + 2} de la revista ESENCIA`;
+      } else {
+        readerRight.removeAttribute("src");
+        readerRight.alt = "";
+      }
+
+      const finalVisiblePage = showRight ? currentPage + 2 : currentPage + 1;
+      readerCounter.textContent = currentPage === 0
+        ? `Portada · 1 de ${pageTotal}`
+        : `Páginas ${currentPage + 1}${showRight ? `–${finalVisiblePage}` : ""} de ${pageTotal}`;
+
+      previousPage.disabled = currentPage === 0;
+      nextPage.disabled = finalVisiblePage >= pageTotal;
+
+      if (animate) {
+        readerSpread.classList.remove("turning");
+        void readerSpread.offsetWidth;
+        readerSpread.classList.add("turning");
+      }
+
+      const preloadIndex = showRight ? currentPage + 2 : currentPage + 1;
+      if (preloadIndex < pageTotal) {
+        const preload = new Image();
+        preload.src = pageSource(preloadIndex);
+      }
+    };
+
+    const openReader = event => {
+      event.preventDefault();
+      lastFocusedElement = document.activeElement;
+      currentPage = 0;
+      renderReader(false);
+      reader.classList.add("open");
+      reader.setAttribute("aria-hidden", "false");
+      document.body.classList.add("menu-open");
+      closeReaderButton.focus();
+    };
+
+    const closeReader = () => {
+      reader.classList.remove("open");
+      reader.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("menu-open");
+      if (lastFocusedElement) lastFocusedElement.focus();
+    };
+
+    const moveForward = () => {
+      if (isSinglePage()) {
+        currentPage = Math.min(currentPage + 1, pageTotal - 1);
+      } else if (currentPage === 0) {
+        currentPage = 1;
+      } else {
+        currentPage = Math.min(currentPage + 2, pageTotal - 1);
+      }
+      renderReader();
+    };
+
+    const moveBackward = () => {
+      if (isSinglePage()) {
+        currentPage = Math.max(currentPage - 1, 0);
+      } else if (currentPage <= 1) {
+        currentPage = 0;
+      } else {
+        currentPage = Math.max(currentPage - 2, 1);
+      }
+      renderReader();
+    };
+
+    document.querySelectorAll("[data-open-reader]").forEach(button => {
+      button.addEventListener("click", openReader);
+    });
+
+    closeReaderButton.addEventListener("click", closeReader);
+    nextPage.addEventListener("click", moveForward);
+    previousPage.addEventListener("click", moveBackward);
+
+    reader.addEventListener("click", event => {
+      if (event.target === reader || event.target.classList.contains("reader-viewport")) closeReader();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (!reader.classList.contains("open")) return;
+      if (event.key === "Escape") closeReader();
+      if (event.key === "ArrowRight") moveForward();
+      if (event.key === "ArrowLeft") moveBackward();
+    });
+
+    window.addEventListener("resize", () => {
+      if (reader.classList.contains("open")) renderReader(false);
     });
   </script>
 </body>
