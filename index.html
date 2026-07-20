@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ESENCIA, revista digital para mujeres reales. Historias de bienestar, belleza, cultura y crecimiento personal.">
-  <meta name="theme-color" content="#6E1F2B">
+  <meta name="theme-color" content="#174B4F">
   <title>ESENCIA | Mujeres reales, historias que inspiran</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,18 +13,18 @@
 
   <style>
     :root {
-      --wine: #6e1f2b;
-      --wine-dark: #4d101b;
-      --cream: #f8f3ee;
-      --cream-deep: #eee4da;
-      --gold: #c9a86a;
-      --rose: #d8b5b5;
-      --ink: #2b2b2b;
-      --muted: #6f6663;
-      --white: #fffdfb;
+      --wine: #174b4f;
+      --wine-dark: #0e3438;
+      --cream: #f7f4eb;
+      --cream-deep: #e5ece8;
+      --gold: #b99a62;
+      --rose: #b7cec8;
+      --ink: #263333;
+      --muted: #66706d;
+      --white: #fffef9;
       --serif: "Cormorant Garamond", Georgia, serif;
       --sans: "Montserrat", Arial, sans-serif;
-      --shadow: 0 24px 65px rgba(75, 31, 31, 0.13);
+      --shadow: 0 24px 65px rgba(23, 75, 79, 0.14);
       --max-width: 1240px;
     }
 
@@ -114,15 +114,15 @@
       top: 0;
       right: 0;
       left: 0;
-      border-bottom: 1px solid rgba(110, 31, 43, 0.08);
-      background: rgba(248, 243, 238, 0.9);
+      border-bottom: 1px solid rgba(23, 75, 79, 0.08);
+      background: rgba(247, 244, 235, 0.92);
       backdrop-filter: blur(18px);
       transition: box-shadow 0.3s ease, background 0.3s ease;
     }
 
     .nav.scrolled {
       background: rgba(255, 253, 251, 0.96);
-      box-shadow: 0 10px 35px rgba(47, 21, 21, 0.08);
+      box-shadow: 0 10px 35px rgba(14, 52, 56, 0.09);
     }
 
     .nav-inner {
@@ -216,8 +216,8 @@
       padding: 145px 0 90px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 78% 35%, rgba(216, 181, 181, 0.33), transparent 30%),
-        linear-gradient(115deg, var(--cream) 0 59%, #efe2dc 59% 100%);
+        radial-gradient(circle at 78% 35%, rgba(183, 206, 200, 0.42), transparent 30%),
+        linear-gradient(115deg, var(--cream) 0 59%, #e1ebe6 59% 100%);
     }
 
     .hero::before {
@@ -703,7 +703,7 @@
 
     .contents-list li {
       padding: 12px 0;
-      border-bottom: 1px solid rgba(110, 31, 43, 0.12);
+      border-bottom: 1px solid rgba(23, 75, 79, 0.14);
       color: #4b4140;
       font-family: var(--serif);
       font-size: 1.13rem;
@@ -713,6 +713,57 @@
       margin-right: 10px;
       color: var(--gold);
       content: "—";
+    }
+
+    .issue-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .previous-edition {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      align-items: center;
+      gap: 20px;
+      max-width: 610px;
+      margin-top: 34px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(23, 75, 79, 0.14);
+    }
+
+    .previous-edition img {
+      width: 92px;
+      box-shadow: 0 12px 28px rgba(14, 52, 56, 0.14);
+    }
+
+    .previous-edition p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .previous-edition strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--wine);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .previous-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .previous-links a {
+      color: var(--wine);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .extraordinary {
@@ -1858,7 +1909,7 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow reveal">Revista digital · Volumen 01</p>
+          <p class="eyebrow reveal">Revista digital · Volumen 02</p>
           <h1 class="hero-logo reveal delay-1">ESENCIA</h1>
           <p class="hero-tagline reveal delay-2">Mujeres reales, historias que inspiran</p>
           <p class="hero-description reveal delay-2">
@@ -1867,10 +1918,10 @@
           </p>
 
           <div class="hero-actions reveal delay-3">
-            <a class="btn btn-primary" href="#revista" data-open-reader>
+            <a class="btn btn-primary" href="#revista" data-open-reader data-issue="2">
               Leer edición <span class="arrow" aria-hidden="true">→</span>
             </a>
-            <a class="btn btn-outline" href="Revista Esencia Vol 01.pdf" download>
+            <a class="btn btn-outline" href="Revista Esencia Vol 02.pdf" download>
               Descargar PDF <span aria-hidden="true">↓</span>
             </a>
           </div>
@@ -1884,8 +1935,8 @@
         </div>
 
         <div class="cover-stage reveal delay-2">
-          <span class="cover-label">Primera edición · 2026</span>
-          <img src="imagesportada-vol1.png" alt="Portada del volumen 01 de la revista ESENCIA">
+          <span class="cover-label">Nueva edición · Julio 2026</span>
+          <img src="imagesportada-vol2.jpg" alt="Portada del volumen 02 de la revista ESENCIA">
         </div>
       </div>
     </section>
@@ -1904,12 +1955,11 @@
           <h2 class="section-title">Carta de la Editora</h2>
 
           <div class="letter-body">
-            <p class="lead">ESENCIA nace para mujeres reales.</p>
-            <p>Para mujeres que trabajan, aman, se equivocan, vuelven a empezar y siguen creciendo.</p>
-            <p>Esta revista no busca mostrar perfección. Busca compartir historias auténticas, consejos prácticos y experiencias que nos ayuden a sentirnos mejor con nosotras mismas.</p>
-            <p>Aquí hablaremos de belleza, bienestar, relaciones, moda, trabajo, autoestima y de todos esos cambios que forman parte de nuestra vida.</p>
-            <p>Creo que cada mujer tiene una historia que merece ser escuchada. También creo que nunca es demasiado tarde para mirarnos con más cariño, descubrir nuevas versiones de nosotras y volver a comenzar.</p>
-            <p>Gracias por acompañarme en este primer número.</p>
+            <p class="lead">Bienvenidos a una nueva edición de ESENCIA.</p>
+            <p>Un espacio creado para inspirar, informar y acompañar.</p>
+            <p>En este número descubriremos cómo la inteligencia artificial puede convertirse en una aliada para el bienestar, la moda y el maquillaje, además de artículos sobre belleza, salud emocional, poesía, justicia y otros temas pensados para enriquecer nuestra vida cotidiana.</p>
+            <p>Espero que cada página les deje una idea, una reflexión o la motivación para seguir creciendo y cuidando de ustedes mismos.</p>
+            <p>Gracias por formar parte de esta comunidad. Su confianza y apoyo hacen posible que ESENCIA continúe creciendo edición tras edición.</p>
 
             <div class="signature">
               Con cariño,
@@ -1929,7 +1979,7 @@
             <h2 class="section-title reveal delay-1">Temas de ESENCIA</h2>
             <p class="section-intro reveal delay-2">Conversaciones cercanas y útiles para acompañar las distintas etapas de la vida de una mujer.</p>
           </div>
-          <span class="issue-number reveal" aria-hidden="true">01</span>
+          <span class="issue-number reveal" aria-hidden="true">02</span>
         </div>
 
         <div class="topics-grid">
@@ -1998,30 +2048,47 @@
     <section class="current-issue" id="edicion">
       <div class="container issue-grid">
         <div class="issue-cover reveal">
-          <img src="imagesportada-vol1.png" alt="Portada de ESENCIA, volumen 01" loading="lazy">
+          <img src="imagesportada-vol2.jpg" alt="Portada de ESENCIA, volumen 02" loading="lazy">
         </div>
 
         <div class="issue-details">
           <p class="eyebrow reveal">Ya disponible</p>
           <h2 class="section-title reveal delay-1">Edición Actual</h2>
-          <p class="volume reveal delay-1">Volumen 01 · Junio 2026</p>
+          <p class="volume reveal delay-1">Volumen 02 · Julio 2026</p>
           <p class="issue-summary reveal delay-2">
-            Nuestra primera edición invita a las lectoras a reencontrarse consigo mismas a través de historias,
-            reflexiones y experiencias de transformación.
+            Una edición para volver a ti: inteligencia artificial a tu favor, bienestar emocional, justicia cotidiana,
+            poesía, tradiciones y conversaciones con propósito.
           </p>
 
           <ul class="contents-list reveal delay-2">
-            <li>Volver a mirarte con cariño</li>
-            <li>Reinventarse después de los 40</li>
-            <li>Moda para la vida real</li>
-            <li>Belleza que inspira</li>
-            <li>Mujeres extraordinarias</li>
-            <li>Bienestar y crecimiento personal</li>
+            <li>La IA a tu favor</li>
+            <li>Justicia cotidiana</li>
+            <li>Redes de apoyo</li>
+            <li>Conversaciones con propósito</li>
+            <li>Hipatia de Alejandría</li>
+            <li>Cuidarte también es escucharte</li>
           </ul>
 
-          <a class="btn btn-primary reveal delay-3" href="#revista" data-open-reader>
-            Abrir revista <span class="arrow" aria-hidden="true">→</span>
-          </a>
+          <div class="issue-actions reveal delay-3">
+            <a class="btn btn-primary" href="#revista" data-open-reader data-issue="2">
+              Abrir revista <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-outline" href="Revista Esencia Vol 02.pdf" download>
+              Descargar PDF <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="previous-edition reveal delay-3">
+            <img src="imagesportada-vol1.png" alt="Portada del volumen 01 de ESENCIA" loading="lazy">
+            <div>
+              <p>Edición anterior</p>
+              <strong>Volumen 01 · Junio 2026</strong>
+              <div class="previous-links">
+                <a href="#revista" data-open-reader data-issue="1">Leer volumen 01</a>
+                <a href="Revista Esencia Vol 01.pdf" download>Descargar PDF</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -2034,12 +2101,12 @@
 
         <div class="reveal delay-1">
           <p class="eyebrow">Legado que inspira</p>
-          <h2>Irene Robledo <span>García</span></h2>
+          <h2>Hipatia de <span>Alejandría</span></h2>
           <p>
-            Educadora, humanista y pionera jalisciense. Su vida estuvo guiada por la convicción de que la educación
-            es una fuerza capaz de transformar destinos y abrir oportunidades para las nuevas generaciones.
+            Matemática, astrónoma y filósofa del siglo IV. Su pensamiento libre y su búsqueda incansable del conocimiento
+            continúan inspirando a las mujeres que defienden su derecho a pensar, aprender y ser.
           </p>
-          <blockquote>Una mujer que convirtió el conocimiento en camino, servicio y libertad.</blockquote>
+          <blockquote>Una mujer que sostuvo sus convicciones y convirtió el conocimiento en libertad.</blockquote>
         </div>
       </div>
     </section>
@@ -2167,7 +2234,7 @@
           <span class="reader-tool-icon" aria-hidden="true">☷</span>
           <span class="reader-tool-label">Índice</span>
         </button>
-        <h2 class="reader-title" id="reader-title">ESENCIA · Volumen 01</h2>
+        <h2 class="reader-title" id="reader-title">ESENCIA · Volumen 02</h2>
       </div>
 
       <div class="reader-tools">
@@ -2189,7 +2256,7 @@
     <div class="reader-viewport">
       <div class="reader-canvas">
         <div class="reader-spread" aria-live="polite">
-          <img class="reader-page" id="reader-page-left" src="revista-pages/pagina-01.jpg" alt="Portada de la revista ESENCIA">
+          <img class="reader-page" id="reader-page-left" src="revista-pages-vol2/pagina-01.jpg" alt="Portada del volumen 02 de la revista ESENCIA">
           <img class="reader-page" id="reader-page-right" src="" alt="" hidden>
         </div>
       </div>
@@ -2199,7 +2266,7 @@
       <button class="reader-arrow" id="reader-prev" type="button" disabled>
         <span aria-hidden="true">←</span> Anterior
       </button>
-      <span class="reader-counter" id="reader-counter">Portada · 1 de 16</span>
+      <span class="reader-counter" id="reader-counter">Portada · 1 de 23</span>
       <button class="reader-arrow" id="reader-next" type="button">
         Siguiente <span aria-hidden="true">→</span>
       </button>
@@ -2221,7 +2288,7 @@
           <p class="footer-tagline">Mujeres reales, historias que inspiran</p>
           <div class="visitor-counter">
             <span>Visitas a ESENCIA</span>
-            <img src="https://hits.sh/alegarz4.github.io/Esencia.svg?style=flat-square&amp;label=visitas&amp;color=6E1F2B&amp;labelColor=241B1C"
+            <img src="https://hits.sh/alegarz4.github.io/Esencia.svg?style=flat-square&amp;label=visitas&amp;color=174B4F&amp;labelColor=0E3438"
                  alt="Contador de visitas de ESENCIA">
           </div>
         </div>
@@ -2243,7 +2310,7 @@
 
       <div class="footer-bottom">
         <span>© 2026 ESENCIA. Todos los derechos reservados.</span>
-        <span>Revista digital · Volumen 01</span>
+        <span>Revista digital · Volumen 02</span>
       </div>
     </div>
   </footer>
@@ -2321,20 +2388,41 @@
     const fullscreenButton = document.getElementById("reader-fullscreen");
     const shareButton = document.getElementById("reader-share");
     const readerToast = document.getElementById("reader-toast");
-    const pageTotal = 16;
+    const issues = {
+      1: {
+        volume: "01",
+        folder: "revista-pages",
+        pages: [
+          "Portada", "Carta de la Editora", "Índice", "Bienestar", "Un momento para ti",
+          "Belleza Real", "Crecimiento Personal", "5 formas de reinventarte", "Moda para la vida real",
+          "Fórmulas de estilo", "Irene Robledo García", "5 lecciones", "Pequeños hábitos",
+          "Carta a mi yo del futuro", "La mujer que vive hoy", "Reflexión final"
+        ]
+      },
+      2: {
+        volume: "02",
+        folder: "revista-pages-vol2",
+        pages: [
+          "Portada", "Carta de la Editora", "Índice", "Despertar", "La IA a tu favor",
+          "¿Qué maquillaje me favorece?", "Justicia cotidiana", "Justicia cotidiana · Continuación",
+          "Redes de apoyo", "Conversaciones con propósito", "Conversaciones · Continuación",
+          "Conversaciones · Continuación", "Conversaciones · Cierre", "Hipatia de Alejandría",
+          "Hipatia de Alejandría · Continuación", "Los refranes", "Refranes de todos los días",
+          "Cuidarte también es escucharte", "Cinco gestos de cuidado emocional",
+          "Crucigrama · Bienestar emocional", "Recomendación de la editora",
+          "Recortables ESENCIA", "Gracias por leernos"
+        ]
+      }
+    };
+    let currentIssue = issues[2];
+    let pageTotal = currentIssue.pages.length;
     let currentPage = 0;
     let readerZoom = 1;
     let lastFocusedElement = null;
     let toastTimer = null;
 
-    const pageSource = index => `revista-pages/pagina-${String(index + 1).padStart(2, "0")}.jpg`;
+    const pageSource = index => `${currentIssue.folder}/pagina-${String(index + 1).padStart(2, "0")}.jpg`;
     const isSinglePage = () => window.matchMedia("(max-width: 560px)").matches;
-    const pageNames = [
-      "Portada", "Carta de la Editora", "Índice", "Bienestar", "Un momento para ti",
-      "Belleza Real", "Crecimiento Personal", "5 formas de reinventarte", "Moda para la vida real",
-      "Fórmulas de estilo", "Irene Robledo García", "5 lecciones", "Pequeños hábitos",
-      "Carta a mi yo del futuro", "La mujer que vive hoy", "Reflexión final"
-    ];
 
     const showToast = message => {
       clearTimeout(toastTimer);
@@ -2361,20 +2449,30 @@
       indexToggle.setAttribute("aria-expanded", "false");
     };
 
-    pageNames.forEach((name, index) => {
-      const button = document.createElement("button");
-      button.className = "reader-thumbnail";
-      button.type = "button";
-      button.dataset.page = index;
-      button.innerHTML = `<img src="${pageSource(index)}" alt="" loading="lazy"><span>${index + 1}. ${name}</span>`;
-      button.addEventListener("click", () => {
-        currentPage = index;
-        if (!isSinglePage() && currentPage > 1 && currentPage % 2 === 0) currentPage -= 1;
-        renderReader();
-        closeIndex();
+    const buildThumbnails = () => {
+      thumbnails.replaceChildren();
+      currentIssue.pages.forEach((name, index) => {
+        const button = document.createElement("button");
+        button.className = "reader-thumbnail";
+        button.type = "button";
+        button.dataset.page = index;
+        button.innerHTML = `<img src="${pageSource(index)}" alt="" loading="lazy"><span>${index + 1}. ${name}</span>`;
+        button.addEventListener("click", () => {
+          currentPage = index;
+          if (!isSinglePage() && currentPage > 1 && currentPage % 2 === 0) currentPage -= 1;
+          renderReader();
+          closeIndex();
+        });
+        thumbnails.appendChild(button);
       });
-      thumbnails.appendChild(button);
-    });
+    };
+
+    const selectIssue = issueNumber => {
+      currentIssue = issues[issueNumber] || issues[2];
+      pageTotal = currentIssue.pages.length;
+      document.getElementById("reader-title").textContent = `ESENCIA · Volumen ${currentIssue.volume}`;
+      buildThumbnails();
+    };
 
     const renderReader = (animate = true) => {
       const single = isSinglePage();
@@ -2402,7 +2500,7 @@
 
       previousPage.disabled = currentPage === 0;
       nextPage.disabled = finalVisiblePage >= pageTotal;
-      localStorage.setItem("esencia-last-page", String(currentPage));
+      localStorage.setItem(`esencia-last-page-${currentIssue.volume}`, String(currentPage));
 
       thumbnails.querySelectorAll(".reader-thumbnail").forEach((thumbnail, index) => {
         thumbnail.classList.toggle("active", index >= currentPage && index < finalVisiblePage);
@@ -2424,7 +2522,8 @@
     const openReader = event => {
       event.preventDefault();
       lastFocusedElement = document.activeElement;
-      const savedPage = Number.parseInt(localStorage.getItem("esencia-last-page"), 10);
+      selectIssue(Number.parseInt(event.currentTarget.dataset.issue || "2", 10));
+      const savedPage = Number.parseInt(localStorage.getItem(`esencia-last-page-${currentIssue.volume}`), 10);
       currentPage = Number.isInteger(savedPage) && savedPage >= 0 && savedPage < pageTotal ? savedPage : 0;
       if (!isSinglePage() && currentPage > 1 && currentPage % 2 === 0) currentPage -= 1;
       setZoom(1);
@@ -2500,7 +2599,7 @@
 
     shareButton.addEventListener("click", async () => {
       const shareData = {
-        title: "Revista ESENCIA · Volumen 01",
+        title: `Revista ESENCIA · Volumen ${currentIssue.volume}`,
         text: "Mujeres reales, historias que inspiran.",
         url: `${window.location.origin}${window.location.pathname}#edicion`
       };
