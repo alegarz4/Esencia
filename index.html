@@ -986,6 +986,109 @@
       font-weight: 600;
     }
 
+    .story-invite {
+      position: fixed;
+      z-index: 980;
+      right: 24px;
+      bottom: 24px;
+      display: grid;
+      width: min(350px, calc(100vw - 32px));
+      grid-template-columns: 112px minmax(0, 1fr);
+      overflow: hidden;
+      border: 1px solid rgba(185, 154, 98, 0.55);
+      background: var(--white);
+      box-shadow: 0 22px 55px rgba(14, 52, 56, 0.24);
+      opacity: 0;
+      transform: translateY(22px);
+      animation: story-invite-in 0.55s 1.2s ease forwards;
+    }
+
+    .story-invite[hidden] {
+      display: none;
+    }
+
+    .story-invite img {
+      width: 100%;
+      height: 100%;
+      min-height: 154px;
+      object-fit: cover;
+    }
+
+    .story-invite-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 22px 38px 22px 20px;
+    }
+
+    .story-invite-kicker {
+      margin: 0 0 5px;
+      color: var(--gold);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .story-invite h2 {
+      margin: 0;
+      color: var(--wine);
+      font-family: var(--serif);
+      font-size: 1.48rem;
+      font-weight: 600;
+      line-height: 1.02;
+    }
+
+    .story-invite p {
+      margin: 8px 0 12px;
+      color: var(--muted);
+      font-size: 0.68rem;
+      line-height: 1.5;
+    }
+
+    .story-invite-link {
+      align-self: flex-start;
+      color: var(--wine);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .story-invite-link span {
+      display: inline-block;
+      margin-left: 5px;
+      transition: transform 0.25s ease;
+    }
+
+    .story-invite-link:hover span,
+    .story-invite-link:focus-visible span {
+      transform: translateX(4px);
+    }
+
+    .story-invite-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--wine);
+      cursor: pointer;
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+
+    @keyframes story-invite-in {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .collaboration-form {
       padding: clamp(30px, 5vw, 52px);
       border: 1px solid rgba(110, 31, 43, 0.12);
@@ -1879,6 +1982,37 @@
         opacity: 1;
         transform: none;
       }
+
+      .story-invite {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .story-invite {
+        right: 12px;
+        bottom: 12px;
+        width: calc(100vw - 24px);
+        grid-template-columns: 88px minmax(0, 1fr);
+      }
+
+      .story-invite img {
+        min-height: 128px;
+      }
+
+      .story-invite-content {
+        padding: 16px 36px 16px 15px;
+      }
+
+      .story-invite h2 {
+        font-size: 1.25rem;
+      }
+
+      .story-invite p {
+        margin: 6px 0 9px;
+      }
     }
   </style>
 </head>
@@ -1918,7 +2052,7 @@
           </p>
 
           <div class="hero-actions reveal delay-3">
-            <a class="btn btn-primary" href="#revista" data-open-reader data-issue="2">
+            <a class="btn btn-primary" href="?vol=02#revista" data-open-reader data-issue="2">
               Leer edición <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="btn btn-outline" href="Revista Esencia Vol 02.pdf" download>
@@ -2070,7 +2204,7 @@
           </ul>
 
           <div class="issue-actions reveal delay-3">
-            <a class="btn btn-primary" href="#revista" data-open-reader data-issue="2">
+            <a class="btn btn-primary" href="?vol=02#revista" data-open-reader data-issue="2">
               Abrir revista <span class="arrow" aria-hidden="true">→</span>
             </a>
             <a class="btn btn-outline" href="Revista Esencia Vol 02.pdf" download>
@@ -2084,7 +2218,7 @@
               <p>Edición anterior</p>
               <strong>Volumen 01 · Junio 2026</strong>
               <div class="previous-links">
-                <a href="#revista" data-open-reader data-issue="1">Leer volumen 01</a>
+                <a href="?vol=01#revista" data-open-reader data-issue="1">Leer volumen 01</a>
                 <a href="Revista Esencia Vol 01.pdf" download>Descargar PDF</a>
               </div>
             </div>
@@ -2227,6 +2361,17 @@
     </section>
   </main>
 
+  <aside class="story-invite" id="story-invite" aria-labelledby="story-invite-title">
+    <img src="participa-esencia.webp" alt="Mujer escribiendo su historia en un cuaderno" loading="lazy">
+    <div class="story-invite-content">
+      <p class="story-invite-kicker">Tu voz importa</p>
+      <h2 id="story-invite-title">Comparte tu historia</h2>
+      <p>Inspira a otras lectoras o participa en nuestra próxima edición.</p>
+      <a class="story-invite-link" href="#contacto">Quiero participar <span aria-hidden="true">→</span></a>
+    </div>
+    <button class="story-invite-close" type="button" aria-label="Cerrar invitación">×</button>
+  </aside>
+
   <section class="reader" id="revista" role="dialog" aria-modal="true" aria-labelledby="reader-title" aria-hidden="true">
     <div class="reader-header">
       <div class="reader-heading">
@@ -2363,11 +2508,29 @@
       if (window.innerWidth > 820) closeMenu();
     });
 
-    const formStatus = new URLSearchParams(window.location.search).get("solicitud");
+    const pageUrl = new URL(window.location.href);
+    const formStatus = pageUrl.searchParams.get("solicitud");
     if (formStatus === "enviada") {
       document.getElementById("form-success")?.classList.add("visible");
       history.replaceState({}, document.title, `${window.location.pathname}#contacto`);
     }
+
+    const storyInvite = document.getElementById("story-invite");
+    const storyInviteClose = storyInvite.querySelector(".story-invite-close");
+    const storyInviteLink = storyInvite.querySelector(".story-invite-link");
+
+    if (sessionStorage.getItem("esencia-story-invite-closed") === "true") {
+      storyInvite.hidden = true;
+    }
+
+    storyInviteClose.addEventListener("click", () => {
+      storyInvite.hidden = true;
+      sessionStorage.setItem("esencia-story-invite-closed", "true");
+    });
+
+    storyInviteLink.addEventListener("click", () => {
+      storyInvite.hidden = true;
+    });
 
     const reader = document.getElementById("revista");
     const readerViewport = reader.querySelector(".reader-viewport");
@@ -2423,6 +2586,7 @@
 
     const pageSource = index => `${currentIssue.folder}/pagina-${String(index + 1).padStart(2, "0")}.jpg`;
     const isSinglePage = () => window.matchMedia("(max-width: 560px)").matches;
+    const readerLinkForIssue = issue => `${window.location.origin}${window.location.pathname}?vol=${issue.volume}#revista`;
 
     const showToast = message => {
       clearTimeout(toastTimer);
@@ -2471,6 +2635,7 @@
       currentIssue = issues[issueNumber] || issues[2];
       pageTotal = currentIssue.pages.length;
       document.getElementById("reader-title").textContent = `ESENCIA · Volumen ${currentIssue.volume}`;
+      shareButton.dataset.shareUrl = readerLinkForIssue(currentIssue);
       buildThumbnails();
     };
 
@@ -2531,6 +2696,7 @@
       reader.classList.add("open");
       reader.setAttribute("aria-hidden", "false");
       document.body.classList.add("menu-open");
+      history.replaceState({}, document.title, readerLinkForIssue(currentIssue));
       closeReaderButton.focus();
     };
 
@@ -2539,6 +2705,7 @@
       reader.classList.remove("open");
       reader.setAttribute("aria-hidden", "true");
       document.body.classList.remove("menu-open");
+      history.replaceState({}, document.title, `${window.location.pathname}#edicion`);
       if (lastFocusedElement) lastFocusedElement.focus();
     };
 
@@ -2567,6 +2734,12 @@
     document.querySelectorAll("[data-open-reader]").forEach(button => {
       button.addEventListener("click", openReader);
     });
+
+    const requestedIssue = Number.parseInt(pageUrl.searchParams.get("vol"), 10);
+    if (window.location.hash === "#revista" && issues[requestedIssue]) {
+      const requestedIssueLink = document.querySelector(`[data-open-reader][data-issue="${requestedIssue}"]`);
+      if (requestedIssueLink) openReader({ preventDefault() {}, currentTarget: requestedIssueLink });
+    }
 
     closeReaderButton.addEventListener("click", closeReader);
     nextPage.addEventListener("click", moveForward);
@@ -2600,8 +2773,8 @@
     shareButton.addEventListener("click", async () => {
       const shareData = {
         title: `Revista ESENCIA · Volumen ${currentIssue.volume}`,
-        text: "Mujeres reales, historias que inspiran.",
-        url: `${window.location.origin}${window.location.pathname}#edicion`
+        text: `Descubre el Volumen ${currentIssue.volume} de ESENCIA. Mujeres reales, historias que inspiran.`,
+        url: shareButton.dataset.shareUrl
       };
 
       try {
