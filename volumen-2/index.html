@@ -6,8 +6,8 @@
   <meta name="description" content="ESENCIA Volumen 02. Bienestar, belleza, inteligencia artificial, cultura e historias reales.">
   <meta name="theme-color" content="#174B4F">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Revista ESENCIA">
-  <meta property="og:title" content="ESENCIA · Volumen 02 | Mujeres reales, historias que inspiran">
+  <meta property="og:site_name" content="Revista ESENCIA CONTIGO">
+  <meta property="og:title" content="ESENCIA CONTIGO · Volumen 02 | Mujeres reales, historias que inspiran">
   <meta property="og:description" content="Descubre el Volumen 02 de ESENCIA: bienestar, belleza, cultura, inteligencia artificial e historias reales.">
   <meta property="og:image" content="https://alegarz4.github.io/Esencia/img/social/vol02.jpg">
   <meta property="og:image:width" content="1200">
@@ -15,12 +15,12 @@
   <meta property="og:image:alt" content="Portada del volumen 02 de la revista ESENCIA">
   <meta property="og:url" content="https://alegarz4.github.io/Esencia/volumen-2/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ESENCIA · Volumen 02 | Mujeres reales, historias que inspiran">
+  <meta name="twitter:title" content="ESENCIA CONTIGO · Volumen 02 | Mujeres reales, historias que inspiran">
   <meta name="twitter:description" content="Bienestar, belleza, cultura, inteligencia artificial e historias reales.">
   <meta name="twitter:image" content="https://alegarz4.github.io/Esencia/img/social/vol02.jpg">
   <link rel="canonical" href="https://alegarz4.github.io/Esencia/volumen-2/">
   <base href="https://alegarz4.github.io/Esencia/">
-  <title>ESENCIA · Volumen 02 | Mujeres reales, historias que inspiran</title>
+  <title>ESENCIA CONTIGO · Volumen 02 | Mujeres reales, historias que inspiran</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1777,7 +1777,9 @@
       }
 
       .hero-logo {
-        font-size: clamp(4.8rem, 18vw, 7rem);
+        font-size: clamp(3.4rem, 13vw, 6rem);
+        letter-spacing: 0.025em;
+        line-height: 0.82;
       }
 
       .cover-stage {
@@ -1867,7 +1869,8 @@
       }
 
       .brand {
-        font-size: 1.65rem;
+        font-size: 1.35rem;
+        letter-spacing: 0.025em;
       }
 
       .hero {
@@ -2093,7 +2096,7 @@
 <body>
   <header class="nav" id="site-nav">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio" aria-label="ESENCIA, volver al inicio">ESENCIA</a>
+      <a class="brand" href="#inicio" aria-label="ESENCIA CONTIGO, volver al inicio">ESENCIA CONTIGO</a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
         <span></span>
@@ -2117,7 +2120,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow reveal">Revista digital · Volumen 02</p>
-          <h1 class="hero-logo reveal delay-1">ESENCIA</h1>
+          <h1 class="hero-logo reveal delay-1">ESENCIA CONTIGO</h1>
           <p class="hero-tagline reveal delay-2">Mujeres reales, historias que inspiran</p>
           <p class="hero-description reveal delay-2">
             Una mirada honesta al bienestar, la belleza, la cultura y el crecimiento personal.
@@ -2183,7 +2186,7 @@
         <div class="topics-header">
           <div>
             <p class="eyebrow reveal">Nuestro universo editorial</p>
-            <h2 class="section-title reveal delay-1">Temas de ESENCIA</h2>
+            <h2 class="section-title reveal delay-1">Temas de ESENCIA CONTIGO</h2>
             <p class="section-intro reveal delay-2">Conversaciones cercanas y útiles para acompañar las distintas etapas de la vida de una mujer.</p>
           </div>
           <span class="issue-number reveal" aria-hidden="true">02</span>
@@ -2340,7 +2343,7 @@
       <div class="container collaborate-grid">
         <div class="collaborate-copy reveal">
           <p class="eyebrow">Convocatoria abierta</p>
-          <h2 class="section-title">Colabora con ESENCIA</h2>
+          <h2 class="section-title">Colabora con ESENCIA CONTIGO</h2>
           <p>
             Buscamos voces auténticas que quieran compartir experiencias, conocimientos e historias capaces de
             acompañar e inspirar a otras mujeres.
@@ -2480,7 +2483,7 @@
           <span class="reader-tool-icon" aria-hidden="true">☷</span>
           <span class="reader-tool-label">Índice</span>
         </button>
-        <h2 class="reader-title" id="reader-title">ESENCIA · Volumen 02</h2>
+        <h2 class="reader-title" id="reader-title">ESENCIA CONTIGO · Volumen 02</h2>
       </div>
 
       <div class="reader-tools">
@@ -2530,7 +2533,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <p class="footer-brand">ESENCIA</p>
+          <p class="footer-brand">ESENCIA CONTIGO</p>
           <p class="footer-tagline">Mujeres reales, historias que inspiran</p>
           <div class="visitor-counter">
             <span>Visitas a ESENCIA</span>
@@ -2776,7 +2779,7 @@
     const selectIssue = issueNumber => {
       currentIssue = issues[issueNumber] || issues[2];
       pageTotal = currentIssue.pages.length;
-      document.getElementById("reader-title").textContent = `ESENCIA · Volumen ${currentIssue.volume}`;
+      document.getElementById("reader-title").textContent = `ESENCIA CONTIGO · Volumen ${currentIssue.volume}`;
       shareButton.dataset.shareUrl = readerLinkForIssue(currentIssue);
       buildThumbnails();
     };
@@ -2916,8 +2919,8 @@
 
     shareButton.addEventListener("click", async () => {
       const shareData = {
-        title: `Revista ESENCIA · Volumen ${currentIssue.volume}`,
-        text: `Descubre el Volumen ${currentIssue.volume} de ESENCIA. Mujeres reales, historias que inspiran.`,
+        title: `Revista ESENCIA CONTIGO · Volumen ${currentIssue.volume}`,
+        text: `Descubre el Volumen ${currentIssue.volume} de ESENCIA CONTIGO. Mujeres reales, historias que inspiran.`,
         url: shareButton.dataset.shareUrl
       };
 
