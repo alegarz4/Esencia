@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ESENCIA, revista digital para mujeres reales. Historias de bienestar, belleza, cultura y crecimiento personal.">
+  <meta name="description" content="ESENCIA CONTIGO, revista digital para mujeres reales. Historias de bienestar, belleza, cultura y crecimiento personal.">
   <meta name="theme-color" content="#174B4F">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Revista ESENCIA CONTIGO">
@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://alegarz4.github.io/Esencia/img/social/vol02.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Portada del volumen 02 de la revista ESENCIA">
+  <meta property="og:image:alt" content="Portada del volumen 02 de la revista ESENCIA CONTIGO">
   <meta property="og:url" content="https://alegarz4.github.io/Esencia/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ESENCIA CONTIGO | Mujeres reales, historias que inspiran">
@@ -149,13 +149,15 @@
     }
 
     .brand {
-      color: var(--wine);
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: 0.13em;
-      line-height: 1;
+      display: block;
+      width: 190px;
       text-decoration: none;
+    }
+
+    .brand img {
+      width: 100%;
+      height: 62px;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -259,14 +261,11 @@
     }
 
     .hero-logo {
-      margin: 0;
-      color: var(--wine);
-      font-family: var(--serif);
-      font-size: clamp(5rem, 11vw, 9.6rem);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      line-height: 0.73;
+      width: min(100%, 670px);
+      margin: -55px 0 -48px;
     }
+
+    .hero-logo img { width: 100%; }
 
     .hero-tagline {
       max-width: 560px;
@@ -1298,14 +1297,12 @@
     }
 
     .footer-brand {
-      margin: 0 0 16px;
-      color: var(--white);
-      font-family: var(--serif);
-      font-size: 3.3rem;
-      font-weight: 500;
-      letter-spacing: 0.11em;
-      line-height: 1;
+      width: min(100%, 270px);
+      margin: -28px 0 -12px;
+      filter: brightness(1.18);
     }
+
+    .footer-brand img { width: 100%; }
 
     .footer-tagline {
       margin: 0;
@@ -1777,9 +1774,8 @@
       }
 
       .hero-logo {
-        font-size: clamp(3.4rem, 13vw, 6rem);
-        letter-spacing: 0.025em;
-        line-height: 0.82;
+        width: min(100%, 620px);
+        margin: -40px 0 -38px;
       }
 
       .cover-stage {
@@ -1869,9 +1865,10 @@
       }
 
       .brand {
-        font-size: 1.35rem;
-        letter-spacing: 0.025em;
+        width: 156px;
       }
+
+      .brand img { height: 54px; }
 
       .hero {
         padding-top: 112px;
@@ -2096,7 +2093,7 @@
 <body>
   <header class="nav" id="site-nav">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio" aria-label="ESENCIA CONTIGO, volver al inicio">ESENCIA CONTIGO</a>
+      <a class="brand" href="#inicio" aria-label="ESENCIA CONTIGO, volver al inicio"><img src="logo-esencia-contigo.png" alt="ESENCIA CONTIGO"></a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
         <span></span>
@@ -2109,7 +2106,7 @@
         <a href="#carta">Carta</a>
         <a href="#edicion">Edición Actual</a>
         <a href="#mujeres">Mujeres Extraordinarias</a>
-        <a href="#joven">ESENCIA Joven</a>
+        <a href="#joven">ESENCIA CONTIGO Joven</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -2120,7 +2117,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow reveal">Revista digital · Volumen 02</p>
-          <h1 class="hero-logo reveal delay-1">ESENCIA CONTIGO</h1>
+          <h1 class="hero-logo reveal delay-1"><img src="logo-esencia-contigo.png" alt="ESENCIA CONTIGO"></h1>
           <p class="hero-tagline reveal delay-2">Mujeres reales, historias que inspiran</p>
           <p class="hero-description reveal delay-2">
             Una mirada honesta al bienestar, la belleza, la cultura y el crecimiento personal.
@@ -2146,7 +2143,7 @@
 
         <div class="cover-stage reveal delay-2">
           <span class="cover-label">Nueva edición · Julio 2026</span>
-          <img src="imagesportada-vol2.jpg" alt="Portada del volumen 02 de la revista ESENCIA">
+          <img src="imagesportada-vol2.jpg" alt="Portada del volumen 02 de la revista ESENCIA CONTIGO">
         </div>
       </div>
     </section>
@@ -2155,9 +2152,9 @@
       <div class="container letter-grid">
         <div class="editor-portrait reveal">
           <figure class="portrait-frame">
-            <img src="editora-vol2.jpg" alt="Mtra. Claudia Alejandra Garza, fundadora y directora editorial de ESENCIA" loading="lazy">
+            <img src="editora-vol2.jpg" alt="Mtra. Claudia Alejandra Garza, fundadora y directora editorial de ESENCIA CONTIGO" loading="lazy">
           </figure>
-          <p class="portrait-caption">Dirección editorial · ESENCIA</p>
+          <p class="portrait-caption">Dirección editorial · ESENCIA CONTIGO</p>
         </div>
 
         <article class="letter-content reveal delay-1">
@@ -2165,16 +2162,16 @@
           <h2 class="section-title">Carta de la Editora</h2>
 
           <div class="letter-body">
-            <p class="lead">Bienvenidos a una nueva edición de ESENCIA.</p>
+            <p class="lead">Bienvenidos a una nueva edición de ESENCIA CONTIGO.</p>
             <p>Un espacio creado para inspirar, informar y acompañar.</p>
             <p>En este número descubriremos cómo la inteligencia artificial puede convertirse en una aliada para el bienestar, la moda y el maquillaje, además de artículos sobre belleza, salud emocional, poesía, justicia y otros temas pensados para enriquecer nuestra vida cotidiana.</p>
             <p>Espero que cada página les deje una idea, una reflexión o la motivación para seguir creciendo y cuidando de ustedes mismos.</p>
-            <p>Gracias por formar parte de esta comunidad. Su confianza y apoyo hacen posible que ESENCIA continúe creciendo edición tras edición.</p>
+            <p>Gracias por formar parte de esta comunidad. Su confianza y apoyo hacen posible que ESENCIA CONTIGO continúe creciendo edición tras edición.</p>
 
             <div class="signature">
               Con cariño,
               <strong>Mtra. Claudia Alejandra Garza</strong>
-              <small>Fundadora y Directora Editorial de ESENCIA</small>
+              <small>Fundadora y Directora Editorial de ESENCIA CONTIGO</small>
             </div>
           </div>
         </article>
@@ -2258,7 +2255,7 @@
     <section class="current-issue" id="edicion">
       <div class="container issue-grid">
         <div class="issue-cover reveal">
-          <img src="imagesportada-vol2.jpg" alt="Portada de ESENCIA, volumen 02" loading="lazy">
+          <img src="imagesportada-vol2.jpg" alt="Portada de ESENCIA CONTIGO, volumen 02" loading="lazy">
         </div>
 
         <div class="issue-details">
@@ -2289,7 +2286,7 @@
           </div>
 
           <div class="previous-edition reveal delay-3">
-            <img src="imagesportada-vol1.png" alt="Portada del volumen 01 de ESENCIA" loading="lazy">
+            <img src="imagesportada-vol1.png" alt="Portada del volumen 01 de ESENCIA CONTIGO" loading="lazy">
             <div>
               <p>Edición anterior</p>
               <strong>Volumen 01 · Junio 2026</strong>
@@ -2325,7 +2322,7 @@
       <div class="container young-content">
         <div class="reveal">
           <p class="eyebrow">Nuevas voces</p>
-          <p class="young-mark">ESENCIA <span>Joven</span></p>
+          <p class="young-mark">ESENCIA CONTIGO <span>Joven</span></p>
         </div>
 
         <div class="young-copy reveal delay-1">
@@ -2359,7 +2356,7 @@
 
           <div class="volunteer-notice">
             <strong>Participación voluntaria</strong>
-            ESENCIA es un proyecto editorial independiente. Actualmente no pagamos por los artículos ni por las
+            ESENCIA CONTIGO es un proyecto editorial independiente. Actualmente no pagamos por los artículos ni por las
             demás participaciones: todas las aportaciones son de carácter voluntario y no remunerado. Cada contenido
             publicado incluirá el crédito correspondiente a quien haya realizado la colaboración.
           </div>
@@ -2368,7 +2365,7 @@
         <form class="collaboration-form reveal delay-1"
               action="https://formsubmit.co/mtra.claudiaalejandragarza@gmail.com"
               method="POST">
-          <input type="hidden" name="_subject" value="Nueva solicitud de colaboración para Revista ESENCIA">
+          <input type="hidden" name="_subject" value="Nueva solicitud de colaboración para Revista ESENCIA CONTIGO">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://alegarz4.github.io/Esencia/?solicitud=enviada#contacto">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
@@ -2415,7 +2412,7 @@
             </div>
 
             <div class="form-field full">
-              <label for="collab-proposal">¿Qué te gustaría aportar a ESENCIA?</label>
+              <label for="collab-proposal">¿Qué te gustaría aportar a ESENCIA CONTIGO?</label>
               <textarea id="collab-proposal" name="Propuesta de colaboración" required></textarea>
             </div>
           </div>
@@ -2424,7 +2421,7 @@
             <input type="checkbox" name="Acepta participación voluntaria" value="Sí" required>
             <span>
               Comprendo y acepto que mi participación sería de carácter voluntario y no remunerado. En caso de publicación,
-              ESENCIA reconocerá la autoría de mi colaboración.
+              ESENCIA CONTIGO reconocerá la autoría de mi colaboración.
             </span>
           </label>
 
@@ -2438,7 +2435,7 @@
   </main>
 
   <aside class="story-invite" id="story-invite" aria-labelledby="story-invite-title">
-    <img src="participa-esencia-v2.webp" alt="Invitación de ESENCIA con una mujer escribiendo su historia" loading="lazy">
+    <img src="participa-esencia-contigo.webp" alt="Invitación de ESENCIA CONTIGO con una mujer escribiendo su historia" loading="lazy">
     <div class="story-invite-content">
       <p class="story-invite-kicker">Tu voz importa</p>
       <h2 id="story-invite-title">Comparte tu historia</h2>
@@ -2450,11 +2447,11 @@
 
   <section class="story-modal" id="invitacion-esencia" role="dialog" aria-modal="true" aria-labelledby="story-modal-title" aria-hidden="true">
     <div class="story-modal-card" role="document">
-      <img class="story-modal-visual" src="participa-esencia-v2.webp" alt="Tu historia puede inspirar a otra mujer">
+      <img class="story-modal-visual" src="participa-esencia-contigo.webp" alt="Tu historia puede inspirar a otra mujer en ESENCIA CONTIGO">
       <div class="story-modal-body">
         <p class="story-modal-kicker">La revista para mujeres reales</p>
         <h2 id="story-modal-title">Queremos conocer tu historia</h2>
-        <p class="story-modal-intro">En ESENCIA creemos en el poder de compartir. Te invitamos a ser parte de un espacio donde las historias reales se convierten en luz, compañía y esperanza.</p>
+        <p class="story-modal-intro">En ESENCIA CONTIGO creemos en el poder de compartir. Te invitamos a ser parte de un espacio donde las historias reales se convierten en luz, compañía y esperanza.</p>
         <div class="story-modal-details">
           <div>
             <h3>¿Quién puede participar?</h3>
@@ -2505,7 +2502,7 @@
     <div class="reader-viewport">
       <div class="reader-canvas">
         <div class="reader-spread" aria-live="polite">
-          <img class="reader-page" id="reader-page-left" src="revista-pages-vol2/pagina-01.jpg" alt="Portada del volumen 02 de la revista ESENCIA">
+          <img class="reader-page" id="reader-page-left" src="revista-pages-vol2/pagina-01.jpg" alt="Portada del volumen 02 de la revista ESENCIA CONTIGO">
           <img class="reader-page" id="reader-page-right" src="" alt="" hidden>
         </div>
       </div>
@@ -2533,12 +2530,12 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <p class="footer-brand">ESENCIA CONTIGO</p>
+          <p class="footer-brand"><img src="logo-esencia-contigo.png" alt="ESENCIA CONTIGO"></p>
           <p class="footer-tagline">Mujeres reales, historias que inspiran</p>
           <div class="visitor-counter">
-            <span>Visitas a ESENCIA</span>
+            <span>Visitas a ESENCIA CONTIGO</span>
             <img src="https://hits.sh/alegarz4.github.io/Esencia.svg?style=flat-square&amp;label=visitas&amp;color=174B4F&amp;labelColor=0E3438"
-                 alt="Contador de visitas de ESENCIA">
+                 alt="Contador de visitas de ESENCIA CONTIGO">
           </div>
         </div>
 
@@ -2553,12 +2550,12 @@
           <a href="#carta">Carta de la Editora</a>
           <a href="#edicion">Edición Actual</a>
           <a href="#mujeres">Mujeres Extraordinarias</a>
-          <a href="#joven">ESENCIA Joven</a>
+          <a href="#joven">ESENCIA CONTIGO Joven</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 ESENCIA. Todos los derechos reservados.</span>
+        <span>© 2026 ESENCIA CONTIGO. Todos los derechos reservados.</span>
         <span>Revista digital · Volumen 02</span>
       </div>
     </div>
@@ -2718,7 +2715,7 @@
           "Hipatia de Alejandría · Continuación", "Los refranes", "Refranes de todos los días",
           "Cuidarte también es escucharte", "Cinco gestos de cuidado emocional",
           "Crucigrama · Bienestar emocional", "Recomendación de la editora",
-          "Recortables ESENCIA", "Gracias por leernos"
+          "Recortables ESENCIA CONTIGO", "Gracias por leernos"
         ]
       }
     };
@@ -2790,14 +2787,14 @@
 
       readerLeft.src = pageSource(currentPage);
       readerLeft.alt = currentPage === 0
-        ? "Portada de la revista ESENCIA"
-        : `Página ${currentPage + 1} de la revista ESENCIA`;
+        ? "Portada de la revista ESENCIA CONTIGO"
+        : `Página ${currentPage + 1} de la revista ESENCIA CONTIGO`;
       readerLeft.classList.toggle("single", !showRight);
 
       readerRight.hidden = !showRight;
       if (showRight) {
         readerRight.src = pageSource(currentPage + 1);
-        readerRight.alt = `Página ${currentPage + 2} de la revista ESENCIA`;
+        readerRight.alt = `Página ${currentPage + 2} de la revista ESENCIA CONTIGO`;
       } else {
         readerRight.removeAttribute("src");
         readerRight.alt = "";
