@@ -21,6 +21,21 @@
   <link rel="canonical" href="https://alegarz4.github.io/Esencia/">
   <base href="https://alegarz4.github.io/Esencia/">
   <title>ESENCIA CONTIGO | Mujeres reales, historias que inspiran</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    "name": "ESENCIA CONTIGO",
+    "description": "Revista digital para mujeres reales. Historias de bienestar, cultura, crecimiento personal e inspiración.",
+    "url": "https://alegarz4.github.io/Esencia/",
+    "logo": "https://alegarz4.github.io/Esencia/logo-esencia-contigo.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Voesia Editorial",
+      "logo": "https://alegarz4.github.io/Esencia/assets/logo-voesia-editorial.webp"
+    }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1304,6 +1319,25 @@
 
     .footer-brand img { width: 100%; }
 
+    .publisher-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+      padding: 10px 16px 10px 12px;
+      border: 1px solid rgba(185, 154, 98, 0.42);
+      background: rgba(255, 254, 249, 0.72);
+      box-shadow: 0 12px 30px rgba(23, 75, 79, 0.08);
+    }
+
+    .publisher-lockup img { width: 64px; height: 54px; object-fit: contain; }
+    .publisher-lockup span { display: block; color: var(--muted); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; }
+    .publisher-lockup strong { display: block; color: var(--ink); font: 600 1.05rem/1.15 var(--serif); }
+    .footer-publisher { display: flex; align-items: center; gap: 14px; margin-top: 20px; }
+    .footer-publisher img { width: 72px; height: 62px; object-fit: contain; }
+    .footer-publisher span { display: block; color: rgba(255,255,255,.52); font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; }
+    .footer-publisher strong { display: block; color: var(--gold); font: 600 1rem var(--serif); }
+
     .footer-tagline {
       margin: 0;
       color: var(--rose);
@@ -2284,6 +2318,10 @@
               Descargar PDF <span aria-hidden="true">↓</span>
             </a>
           </div>
+          <div class="publisher-lockup reveal delay-3" aria-label="Una publicación de Voesia Editorial">
+            <img src="assets/logo-voesia-editorial.webp" alt="Voesia Editorial">
+            <div><span>Una publicación de</span><strong>Voesia Editorial</strong></div>
+          </div>
 
           <div class="previous-edition reveal delay-3">
             <img src="imagesportada-vol1.png" alt="Portada del volumen 01 de ESENCIA CONTIGO" loading="lazy">
@@ -2532,6 +2570,10 @@
         <div>
           <p class="footer-brand"><img src="logo-esencia-contigo.png" alt="ESENCIA CONTIGO"></p>
           <p class="footer-tagline">Mujeres reales, historias que inspiran</p>
+          <div class="footer-publisher">
+            <img src="assets/logo-voesia-editorial.webp" alt="Voesia Editorial">
+            <div><span>Sello editorial</span><strong>Voesia Editorial</strong></div>
+          </div>
           <div class="visitor-counter">
             <span>Visitas a ESENCIA CONTIGO</span>
             <img src="https://hits.sh/alegarz4.github.io/Esencia.svg?style=flat-square&amp;label=visitas&amp;color=174B4F&amp;labelColor=0E3438"
@@ -2555,7 +2597,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 ESENCIA CONTIGO. Todos los derechos reservados.</span>
+        <span>© 2026 ESENCIA CONTIGO · Voesia Editorial. Todos los derechos reservados.</span>
         <span>Revista digital · Volumen 02</span>
       </div>
     </div>
