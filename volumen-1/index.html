@@ -43,18 +43,18 @@
 
   <style>
     :root {
-      --wine: #174b4f;
-      --wine-dark: #0e3438;
-      --cream: #f7f4eb;
-      --cream-deep: #e5ece8;
+      --wine: #7b2639;
+      --wine-dark: #4f1725;
+      --cream: #fbf5f2;
+      --cream-deep: #eadbd9;
       --gold: #b99a62;
-      --rose: #b7cec8;
-      --ink: #263333;
-      --muted: #66706d;
+      --rose: #d9adb2;
+      --ink: #3b292d;
+      --muted: #756166;
       --white: #fffef9;
       --serif: "Cormorant Garamond", Georgia, serif;
       --sans: "Montserrat", Arial, sans-serif;
-      --shadow: 0 24px 65px rgba(23, 75, 79, 0.14);
+      --shadow: 0 24px 65px rgba(79, 23, 37, 0.14);
       --max-width: 1240px;
     }
 
@@ -144,7 +144,7 @@
       top: 0;
       right: 0;
       left: 0;
-      border-bottom: 1px solid rgba(23, 75, 79, 0.08);
+      border-bottom: 1px solid rgba(79, 23, 37, 0.08);
       background: rgba(247, 244, 235, 0.92);
       backdrop-filter: blur(18px);
       transition: box-shadow 0.3s ease, background 0.3s ease;
@@ -248,8 +248,8 @@
       padding: 145px 0 90px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 78% 35%, rgba(183, 206, 200, 0.42), transparent 30%),
-        linear-gradient(115deg, var(--cream) 0 59%, #e1ebe6 59% 100%);
+        radial-gradient(circle at 78% 35%, rgba(217, 173, 178, 0.42), transparent 30%),
+        linear-gradient(115deg, var(--cream) 0 59%, #f0e0df 59% 100%);
     }
 
     .hero::before {
@@ -732,7 +732,7 @@
 
     .contents-list li {
       padding: 12px 0;
-      border-bottom: 1px solid rgba(23, 75, 79, 0.14);
+      border-bottom: 1px solid rgba(79, 23, 37, 0.14);
       color: #4b4140;
       font-family: var(--serif);
       font-size: 1.13rem;
@@ -758,7 +758,7 @@
       max-width: 610px;
       margin-top: 34px;
       padding-top: 28px;
-      border-top: 1px solid rgba(23, 75, 79, 0.14);
+      border-top: 1px solid rgba(79, 23, 37, 0.14);
     }
 
     .previous-edition img {
@@ -1314,10 +1314,13 @@
     .footer-brand {
       width: min(100%, 270px);
       margin: -28px 0 -12px;
-      filter: brightness(1.18);
     }
 
-    .footer-brand img { width: 100%; }
+    .footer-brand img {
+      width: 100%;
+      filter: brightness(0) saturate(100%) invert(83%) sepia(17%) saturate(911%) hue-rotate(301deg) brightness(101%) contrast(91%);
+      opacity: 0.96;
+    }
 
     .publisher-lockup {
       display: inline-flex;
@@ -1327,7 +1330,7 @@
       padding: 10px 16px 10px 12px;
       border: 1px solid rgba(185, 154, 98, 0.42);
       background: rgba(255, 254, 249, 0.72);
-      box-shadow: 0 12px 30px rgba(23, 75, 79, 0.08);
+      box-shadow: 0 12px 30px rgba(79, 23, 37, 0.08);
     }
 
     .publisher-lockup img { width: 64px; height: 54px; object-fit: contain; }
@@ -2140,7 +2143,7 @@
         <a href="#carta">Carta</a>
         <a href="#edicion">Edición Actual</a>
         <a href="#mujeres">Mujeres Extraordinarias</a>
-        <a href="#joven">ESENCIA CONTIGO Joven</a>
+        <a href="#joven">ESENCIA JOVEN</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -2218,9 +2221,9 @@
           <div>
             <p class="eyebrow reveal">Nuestro universo editorial</p>
             <h2 class="section-title reveal delay-1">Temas de ESENCIA CONTIGO</h2>
-            <p class="section-intro reveal delay-2">Conversaciones cercanas y útiles para acompañar las distintas etapas de la vida de una mujer.</p>
+            <p class="section-intro reveal delay-2">Una primera edición dedicada al bienestar, la autenticidad y la fuerza de reinventarnos.</p>
           </div>
-          <span class="issue-number reveal" aria-hidden="true">02</span>
+          <span class="issue-number reveal" aria-hidden="true">01</span>
         </div>
 
         <div class="topics-grid">
@@ -2232,7 +2235,7 @@
                 <path d="M17 42h14"/>
               </svg>
               <h3>Bienestar</h3>
-              <p>Pequeños hábitos, salud emocional y decisiones conscientes que transforman nuestra vida cotidiana.</p>
+              <p>Hábitos sencillos y decisiones conscientes para cuidar el cuerpo, la mente y la vida cotidiana.</p>
             </div>
           </article>
 
@@ -2244,7 +2247,7 @@
                 <path d="M11 7v8M7 11h8M39 33v8M35 37h8"/>
               </svg>
               <h3>Belleza Real</h3>
-              <p>Autocuidado, confianza y una belleza que no exige perfección para sentirse poderosa.</p>
+              <p>Autocuidado y confianza para reconocer una belleza auténtica, libre de perfecciones imposibles.</p>
             </div>
           </article>
 
@@ -2255,8 +2258,8 @@
                 <path d="M18 11c0-4 2-7 6-7s6 3 6 7c0 3-2 5-6 7L8 27l4 17h24l4-17-16-9"/>
                 <path d="M12 27h24M19 27l-2 17M29 27l2 17"/>
               </svg>
-              <h3>Moda para la Vida Real</h3>
-              <p>Estilo personal, prendas versátiles y propuestas pensadas para mujeres que viven plenamente.</p>
+              <h3>Estilo para la Vida Real</h3>
+              <p>Fórmulas de estilo y prendas versátiles para vestir con seguridad sin dejar de ser tú.</p>
             </div>
           </article>
 
@@ -2267,7 +2270,7 @@
                 <path d="m24 5 5.8 11.7L43 18.6l-9.5 9.2 2.2 13L24 34.7l-11.7 6.1 2.2-13L5 18.6l13.2-1.9L24 5Z"/>
               </svg>
               <h3>Mujeres Extraordinarias</h3>
-              <p>Perfiles de mujeres que abrieron camino y cuyo legado continúa inspirando nuevas posibilidades.</p>
+              <p>El legado de Irene Robledo García y de mujeres que abrieron camino para las generaciones actuales.</p>
             </div>
           </article>
 
@@ -2278,8 +2281,8 @@
                 <circle cx="24" cy="24" r="18"/>
                 <path d="M24 14v20M14 24h20M18 18l12 12M30 18 18 30"/>
               </svg>
-              <h3>Crecimiento Personal</h3>
-              <p>Herramientas para conocernos, reinventarnos y avanzar con más claridad y confianza.</p>
+              <h3>Reinvención Personal</h3>
+              <p>Ideas para conocernos, comenzar de nuevo y avanzar con mayor claridad y confianza.</p>
             </div>
           </article>
         </div>
@@ -2360,7 +2363,7 @@
       <div class="container young-content">
         <div class="reveal">
           <p class="eyebrow">Nuevas voces</p>
-          <p class="young-mark">ESENCIA CONTIGO <span>Joven</span></p>
+          <p class="young-mark">ESENCIA <span>Joven</span></p>
         </div>
 
         <div class="young-copy reveal delay-1">
@@ -2592,7 +2595,7 @@
           <a href="#carta">Carta de la Editora</a>
           <a href="#edicion">Edición Actual</a>
           <a href="#mujeres">Mujeres Extraordinarias</a>
-          <a href="#joven">ESENCIA CONTIGO Joven</a>
+          <a href="#joven">ESENCIA JOVEN</a>
         </div>
       </div>
 
